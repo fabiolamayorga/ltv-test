@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "custom.css",
+	"sources": [
+		"../../scss/custom.scss"
+	],
+	"sourcesContent": [
+		".nav-icons {\n    padding: 0 20px;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,UAAU,AAAC,CACP,OAAO,CAAE,MAAM,CAClB"
+}
