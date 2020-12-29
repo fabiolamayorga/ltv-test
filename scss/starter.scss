@@ -29,6 +29,7 @@ $blue: #004A80;
 $white: #fff;
 $yellow: #F6BC25;
 $darkGray: #4A4A4A;
+$lightGray: #9B9B9B;
 //
 // Bring in Bootstrap
 //
@@ -118,6 +119,11 @@ h2 {
   background: $blue;
 }
 
+.main-content {
+  background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+  padding-top: 30px;
+}
+
 p {
   color: $darkGray;
   font-size: 18px;
@@ -127,4 +133,90 @@ p {
 .head-text {
   color: $white;
   font-size: 18px;
+}
+
+.header-icons {
+  padding-top: 20px;
+  padding-bottom: 30px; 
+
+  .icon {
+    margin-left: 25px;
+  }
+}
+
+.email-form {
+  .form-control {
+    height: 50px;
+    color: $lightGray;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+    border-radius: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(lg) {
+      width: 75%;
+    }
+
+  }
+
+  .btn-primary {
+    background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+    font-size: 22px;
+    color: $blue;
+    letter-spacing: 0.93px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(lg) {
+      width: 20%;
+    }
+  }
+
+  .email-form-elements {
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+
+    
+    }
+  }
+}
+
+.custom-card {
+  background: none;
+  border: 0;
+
+  .card-number {
+    background: $blue;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-family: HelveticaNeue-Bold;
+    font-size: 26.88px;
+    color: $yellow;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .card-body {
+    padding: 0;
+
+    .card-text {
+      color: $black;
+
+    }
+  }
+
+  .card-title {
+    color: $blue;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
 }

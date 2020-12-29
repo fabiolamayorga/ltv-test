@@ -5,53 +5,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/starter.css">
-  <title>Bootstrap npm starter</title>
+  <title>Search Email page</title>
 </head>
 
 <body>
   <header class="bg-company-color">
     <div class="container">
-      <nav class="navbar navbar-expand-lg">
+      <!-- <nav class="navbar navbar-expand-lg header-icons">
         <div class="container">
           <div>
             <img src="assets/imgs/SVGs/Logo.svg" alt="" />
           </div>
-          <div>
-            <img src="assets/imgs/SVGs/icn_search.svg" />
-            <img src="assets/imgs/SVGs/icn_person.svg" />
+          <div class="d-flex justify-content-end">
+            <img src="assets/imgs/SVGs/icn_search.svg" class="icon"/>
+            <img src="assets/imgs/SVGs/icn_person.svg" class="icon"/>
           </div>
         </div>
-      </nav>
-      <h2 class="text-center color-white">
-        Search Any Email Address
-      </h2>
-      <!-- <div class="row">
-        <div class="col">
-            <h1 class="text-center">
-                Search Any Email Address
-              </h1>
-        </div> -->
-      <p class="head-text text-center">
-        <span class="color-yellow">Start Here</span> - Look up the owner's name, photos and online profiles. <br />
-        See
-        what you find!
-      </p>
-    </div>
-
-    <form>
-      <div class="mb-3">
-        <div class="">
-          <input type="text" placeholder="Email">
+      </nav> -->
+      <div class="row header-icons">
+        <div class="col-6">
+          <img src="assets/imgs/SVGs/Logo.svg" alt="Company Logo" />
         </div>
-        <div class="">
-          <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+        <div class="col-6 d-flex justify-content-end">
+          <img src="assets/imgs/SVGs/icn_search.svg" class="icon" />
+          <img src="assets/imgs/SVGs/icn_person.svg" class="icon" />
         </div>
       </div>
 
-    </form>
+      <h2 class="text-center color-white">
+        Search Any Email Address
+      </h2>
+      <p class="head-text text-center">
+        <span class="color-yellow">Start Here</span> - Look up the owner's name, photos and online profiles.
+        See
+        what you find!
+      </p>
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-9 col-md-9">
+          <form class="email-form" novalidate>
+            <div class="mb-3">
+              <div class="email-form-elements d-flex justify-content-between">
+                <div>
+                  <input type="text" placeholder="Email" class="form-control" required />
+                  <div class="invalid-feedback">
+                    Please add a valid email address
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Go!</button>
+              </div>
+              <div class="">
+
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+
     </div>
   </header>
-  <div class="container">
+  <div class="container-fluid main-content">
     <div class="row">
       <div class="col">
         <h2 class="color-blue text-center">
@@ -63,113 +80,107 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-12">
-        <div class="card mb-3" style="max-width: 540px;">
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card mb-3 custom-card">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img src="..." alt="...">
+            <div class="col-3 d-flex justify-content-center">
+              <div class="card-number">1</div>
             </div>
-            <div class="col-md-8">
+            <div class="col-9">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-12">
-        <div class="card mb-3" style="max-width: 540px;">
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card mb-3 custom-card">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img src="..." alt="...">
+            <div class="col-3 d-flex justify-content-center">
+              <div class="card-number">1</div>
             </div>
-            <div class="col-md-8">
+            <div class="col-9">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-12">
-        <div class="card mb-3" style="max-width: 540px;">
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card mb-3 custom-card">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img src="..." alt="...">
+            <div class="col-3 d-flex justify-content-center">
+              <div class="card-number">1</div>
             </div>
-            <div class="col-md-8">
+            <div class="col-9">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-12">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="..." alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card mb-3 custom-card">
+          <div class="row g-0">
+            <div class="col-3 d-flex justify-content-center">
+              <div class="card-number">1</div>
+            </div>
+            <div class="col-9">
+              <div class="card-body">
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-4 col-sm-12">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="..." alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                      content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card mb-3 custom-card">
+          <div class="row g-0">
+            <div class="col-3 d-flex justify-content-center">
+              <div class="card-number">1</div>
+            </div>
+            <div class="col-9">
+              <div class="card-body">
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="col-md-4 col-sm-12">
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="..." alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card mb-3 custom-card">
+          <div class="row g-0">
+            <div class="col-3 d-flex justify-content-center">
+              <div class="card-number">1</div>
+            </div>
+            <div class="col-9">
+              <div class="card-body">
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
