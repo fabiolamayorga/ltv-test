@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10946,8 +10946,7 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10958,7 +10957,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-let form = document.querySelectorAll('.email-form')
+//import $ from '../../node_modules/jquery/dist/jquery.min.js';
+
+var form = document.querySelectorAll('.email-form')
 
 /**
  * Form Validation
@@ -10966,19 +10967,26 @@ let form = document.querySelectorAll('.email-form')
 Array.prototype.slice.call(form)
     .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-            event.preventDefault()
-
-            if (form.checkValidity()) {
-                form.classList.add('was-validated');
-
-            }else {
+            if (!form.checkValidity()) {
+                event.preventDefault()
                 event.stopPropagation()
-
             }
-            let data = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(form).serialize();
-            
-            window.location.replace(`/results?${data}`);
 
+            form.classList.add('was-validated')
+
+
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.post("results.html", __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.email-form').serialize())
+
+            // fetch('https://ltv-data-api.herokuapp.com/api/v1/records.json?email=doesmith@example.com',
+            //     {
+            //         'mode': 'no-cors',
+            //         'headers': {
+            //             'Access-Control-Allow-Origin': '*',
+            //         }
+            //     }
+            // )
+            //     .then(response => response.json())
+            //     .then(data => console.log(data))
 
         }, false)
     })

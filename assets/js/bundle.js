@@ -10958,7 +10958,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-let form = document.querySelectorAll('.email-form')
+var form = document.querySelectorAll('.email-form')
 
 /**
  * Form Validation
@@ -10966,20 +10966,11 @@ let form = document.querySelectorAll('.email-form')
 Array.prototype.slice.call(form)
     .forEach(function (form) {
         form.addEventListener('submit', function (event) {
-            event.preventDefault()
-
-            if (form.checkValidity()) {
-                form.classList.add('was-validated');
-
-            }else {
+            if (!form.checkValidity()) {
+                event.preventDefault()
                 event.stopPropagation()
-
             }
-            let data = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(form).serialize();
-            
-            window.location.replace(`/results?${data}`);
-
-
+            form.classList.add('was-validated')
         }, false)
     })
 

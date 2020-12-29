@@ -2,33 +2,85 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/starter.css">
-  <title>Search Email page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/starter.css">
+    <link rel="stylesheet" href="assets/css/results.css">
+
+    <title>Search Email page</title>
 </head>
 
 <body>
-  <header class="bg-company-color">
-    <div class="container">
-      <div class="row header-icons">
-        <div class="col-6">
-          <img src="assets/imgs/SVGs/Logo.svg" alt="Company Logo" />
+    <header class="bg-company-color">
+        <div class="container">
+            <div class="row header-icons">
+                <div class="col-6">
+                    <img src="assets/imgs/SVGs/Logo.svg" alt="Company Logo" />
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <img src="assets/imgs/SVGs/icn_search.svg" class="icon" />
+                    <img src="assets/imgs/SVGs/icn_person.svg" class="icon" />
+                </div>
+            </div>
+
         </div>
-        <div class="col-6 d-flex justify-content-end">
-          <img src="assets/imgs/SVGs/icn_search.svg" class="icon" />
-          <img src="assets/imgs/SVGs/icn_person.svg" class="icon" />
         </div>
-      </div>
+    </header>
+    <div class="container results-wrapper">
+        <div class="spinner"><img src="assets/imgs/loading_spinner.gif" /></div>
+        <div class="row no-results hide">
+            <h2>0 results</h2>
+            <p>Try starting a new search below</p>
+        </div>
+        <div class="row result d-flex justify-content-center">
+            <div class="col-12">
+                <div class="result-headline">
+                    <h2>Result</h2>
+                    <p>Look at the result below to see the details of the person you’re searched for.</p>
+                </div>
+                <div class="card">
+
+                </div>
+            </div>
+        </div>
+
 
     </div>
-    </div>
-  </header>
-  <div class="container main-content">
-    
-  </div>
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script type="module" src="assets/js/starter.js"></script>
+    <div class="container-fluid bg-company-color search-again-wrapper">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center color-white">
+                    Can’t Find The Right Person?
+                </h2>
+                <p class="head-text text-center">
+                    <span class="color-yellow">Try Again</span> - Make a new search
+                </p>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-9 col-md-9">
+                        <form class="email-form" novalidate method="GET" action="results.html">
+                            <div class="mb-3">
+                                <div class="email-form-elements d-flex justify-content-between">
+                                    <div>
+                                        <input type="text" placeholder="Email" class="form-control" required id="emai"
+                                            name="email" />
+                                        <div class="invalid-feedback">
+                                            Please add a valid email address
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Go!</button>
+                                </div>
+                                <div class="">
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <script src="assets/js/results.js"></script>
 </body>
 
 </html>

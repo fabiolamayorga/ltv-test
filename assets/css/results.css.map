@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "results.css",
+	"sources": [
+		"../../scss/results.scss",
+		"../../scss/colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"colors.scss\";\n\n\n.results-wrapper {\n    margin-top: 30px;\n    margin-bottom: 30px;\n\n    .result {\n        &-headline {\n            text-align: center;\n        }\n    \n        .card {\n            background: $white;\n            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);\n            border-radius: 30px;\n    \n            &-info-wrappers{\n                margin-bottom: 1rem;\n    \n                p {\n                    margin-bottom: 0;\n                }\n            }\n\n            &-icon-profile{\n                width: 90px;\n                background: $blue;\n                height: 90px;\n                display: flex;\n                justify-content: center;\n                border-radius: 100%;\n\n                img{\n                    width: 40%;\n                }\n            }\n        }\n    }\n}\n\n\n.search-again-wrapper {\n    padding-top: 30px;\n    padding-bottom: 30px;\n  \n}\n",
+		"$blue: #004A80;\n$white: #fff;\n$yellow: #F6BC25;\n$darkGray: #4A4A4A;\n$lightGray: #9B9B9B;"
+	],
+	"names": [],
+	"mappings": "AAGA,AAAA,gBAAgB,AAAC,CACb,UAAU,CAAE,IAAI,CAChB,aAAa,CAAE,IAAI,CAkCtB,AApCD,AAKQ,gBALQ,CAKP,gBAAS,AAAC,CACP,UAAU,CAAE,MAAM,CACrB,AAPT,AASQ,gBATQ,CAIZ,OAAO,CAKH,KAAK,AAAC,CACF,UAAU,CCZd,IAAI,CDaA,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,eAAgB,CACxC,aAAa,CAAE,IAAI,CAsBtB,AAlCT,AAcY,gBAdI,CAIZ,OAAO,CAUE,mBAAc,AAAA,CACX,aAAa,CAAE,IAAI,CAKtB,AApBb,AAiBgB,gBAjBA,CAIZ,OAAO,CAUE,mBAAc,CAGX,CAAC,AAAC,CACE,aAAa,CAAE,CAAC,CACnB,AAnBjB,AAsBY,gBAtBI,CAIZ,OAAO,CAkBE,kBAAa,AAAA,CACV,KAAK,CAAE,IAAI,CACX,UAAU,CC3BnB,OAAO,CD4BE,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,aAAa,CAAE,IAAI,CAKtB,AAjCb,AA8BgB,gBA9BA,CAIZ,OAAO,CAkBE,kBAAa,CAQV,GAAG,AAAA,CACC,KAAK,CAAE,GAAG,CACb,AAOjB,AAAA,qBAAqB,AAAC,CAClB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CAEvB"
+}

@@ -1,0 +1,47 @@
+@import "colors.scss";
+
+
+.results-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .result {
+        &-headline {
+            text-align: center;
+        }
+    
+        .card {
+            background: $white;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+            border-radius: 30px;
+    
+            &-info-wrappers{
+                margin-bottom: 1rem;
+    
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-icon-profile{
+                width: 90px;
+                background: $blue;
+                height: 90px;
+                display: flex;
+                justify-content: center;
+                border-radius: 100%;
+
+                img{
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+
+.search-again-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+}
