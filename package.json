@@ -16,7 +16,7 @@
     "server": "serve",
     "watch": "nodemon -e html,scss -x \"npm run css\"",
     "webpack": "webpack --config webpack.config.js ",
-    "heroku-postbuild": "npm run build && webpack -p"
+    "heroku-postbuild": "webpack -p"
   },
   "keywords": [
     "bootstrap",
