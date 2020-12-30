@@ -6,6 +6,7 @@
     "node": "10.16.0"
   },
   "scripts": {
+    "start": "npm run css && npm run webpack",
     "build": "npm run css && npm run webpack",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
     "css-prefix": "postcss --replace assets/css/starter.css --use autoprefixer --map",
