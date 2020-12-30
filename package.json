@@ -5,7 +5,6 @@
   "engines": {
     "node": "10.16.0"
   },
-  "start": "index.html",
   "scripts": {
     "build": "npm run css && npm run webpack",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
