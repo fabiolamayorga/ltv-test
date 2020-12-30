@@ -5,14 +5,7 @@
   "engines": {
     "node": "10.16.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap-npm-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/twbs/bootstrap-npm-starter/issues"
-  },
-  "homepage": "https://github.com/twbs/bootstrap-npm-starter#readme",
+  "start": "index.html",
   "scripts": {
     "build": "npm run css && npm run webpack",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
