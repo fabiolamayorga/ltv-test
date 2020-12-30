@@ -67,45 +67,84 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */
-/***/ (function(module, exports) {
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-//import $ from 'jquery';
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return formHandler; });
+/**
+ * Form handler to validate and submit 
+ * @param {Object} form 
+ */
+const formHandler = (form) => {
+
+    Array.prototype.slice.call(form)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated');
+            }, false)
+        })
+
+};
+
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formHandler__ = __webpack_require__(0);
+
+
+/**
+ * Get Values from URL to retrieve the email
+ */
 
 const queryString = window.location.search;
 let searchParams = new URLSearchParams(queryString);
 const email = searchParams.get('email');
 
-
+/**
+ * Get DOM elements to update according results from fetch API
+ */
 let spinnerElement = document.querySelector('.spinner');
 let noResultsElement = document.querySelector('.no-results');
 let resultsElement = document.querySelector('.result');
 
 let cardElement = document.querySelector('.result .card');
+let form = document.querySelectorAll('.email-form')
 
-
-
-fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
+/**
+ * Fetch data from api
+ * @param {String} email 
+ */
+const getData = (email) => {
+    fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
     .then(response => response.json())
     .then(data => {
         spinnerElement.classList.add('hide');
-        console.log(data);
-        if (data.length > 0) {
+        if (data.length === 0) {
             noResultsElement.classList.remove('hide');
         } else {
             resultsElement.classList.remove('hide');
 
             let cardComponent =
                 ` <div class="card-body">
-                <div class="row mb-3">
+                <div class="row mb-4">
                     <div class="col-2 d-none d-sm-block">
                         <div class="card-icon-profile">
                             <img src="assets/imgs/SVGs/icn_person.svg" />
                         </div>
                     </div>
-                    <div class="col-10">
-                        <div class="row mb-3">
+                    <div class="col-md-10 col-sm-12">
+                        <div class="row mb-4">
                             <div class="col-12">
                                 <h2 class="card-title">${data.first_name} ${data.last_name}</h2>
                                 <p class="card-text">${data.description}</p>
@@ -113,13 +152,13 @@ fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <div class="row mb-3">
+                                <div class="row mb-4">
                                     <div class="col-12">
                                         <h5 class="card-subtitle">Address</h5>
                                         <p class="card-text">${data.address}</p>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
+                                <div class="row mb-4">
                                     <div class="col-12">
                                         <h5 class="card-subtitle">Email</h5>
                                         <p class="card-text">${data.email}</p>
@@ -127,7 +166,7 @@ fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
-                                <div class="row mb-3">
+                                <div class="row mb-4">
                                     <div class="col-12">
                                         <h5 class="card-subtitle">Phone number</h5>
                                         <div class="card-info-wrappers">
@@ -137,7 +176,7 @@ fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
+                                <div class="row mb-4">
                                     <div class="col-12">
                                         <h5 class="card-subtitle">Relatives</h5>
                                         <div class="card-info-wrappers">
@@ -156,6 +195,14 @@ fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
             cardElement.innerHTML = cardComponent;
         }
     })
+}
+
+/**
+ * Make functions available
+ */
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__formHandler__["a" /* formHandler */])(form);
+getData(email);
+
 
 /***/ })
 /******/ ]);

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/starter.css">
     <link rel="stylesheet" href="assets/css/results.css">
 
-    <title>Search Email page</title>
+    <title>Results Email page</title>
 </head>
 
 <body>
@@ -26,16 +26,19 @@
         </div>
         </div>
     </header>
-    <div class="container results-wrapper">
-        <div class="spinner"><img src="assets/imgs/loading_spinner.gif" /></div>
-        <div class="row no-results hide">
+    <div class="container results-wrapper ">
+        <div class="spinner row d-flex align-items-center flex-column">
+            <img src="assets/imgs/loading_spinner.gif" />
+            <p class="color-blue mt-3">Please wait a moment</p>
+        </div>
+        <div class="row no-results align-items-center flex-column hide">
             <h2>0 results</h2>
             <p>Try starting a new search below</p>
         </div>
-        <div class="row result d-flex justify-content-center">
+        <div class="row result hide d-flex justify-content-center">
             <div class="col-12">
                 <div class="result-headline">
-                    <h2>Result</h2>
+                    <h2>1 Result</h2>
                     <p>Look at the result below to see the details of the person you’re searched for.</p>
                 </div>
                 <div class="card">
@@ -57,30 +60,43 @@
                 </p>
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-9 col-md-9">
-                        <form class="email-form" novalidate method="GET" action="results.html">
-                            <div class="mb-3">
-                                <div class="email-form-elements d-flex justify-content-between">
-                                    <div>
-                                        <input type="text" placeholder="Email" class="form-control" required id="emai"
+                        <form class="email-form novalidate method="GET" action="results">
+                            <div class="mb-3 d-flex justify-content-between row">
+                                <div class="col-sm-12 col-lg-10">
+                                    <div class="email-form-elements">
+                                        <input type="email" placeholder="Email" class="form-control" required id="emai"
                                             name="email" />
-                                        <div class="invalid-feedback">
-                                            Please add a valid email address
+
+                                        <div class="row invalid-feedback">
+                                            <div class="col-lg-6 col-sm-12  ">
+                                                Please add a valid email address
+
+                                            </div>
                                         </div>
                                     </div>
-
+                                </div>
+                                <div class="col-sm-12 col-lg-2">
                                     <button type="submit" class="btn btn-primary">Go!</button>
                                 </div>
-                                <div class="">
-
-                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-disclaimer d-flex align-items-start">
+                                        <img src="assets/imgs/SVGs/lock.svg" class="icon-lock" />
+                                        <p class="color-yellow">Enter Any Email Address. They won't be
+                                            notified.</p>
+                                    </div>
+                                </div>
 
-                        </form>
+                            </div>
                     </div>
-                </div>
 
+                    </form>
+                </div>
             </div>
-            <script src="assets/js/results.js"></script>
+
+        </div>
+        <script src="assets/js/results.js"></script>
 </body>
 
 </html>

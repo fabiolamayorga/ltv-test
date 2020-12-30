@@ -1,30 +1,13 @@
 // Importing JavaScript
-
-import $ from 'jquery';
-
-let form = document.querySelectorAll('.email-form')
+import {formHandler} from './formHandler';
 
 /**
- * Form Validation
+ * Initializes form functionality
  */
-Array.prototype.slice.call(form)
-    .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-
-            form.classList.add('was-validated');
-
-            let data = $(form).serialize();
-            
-            window.location.replace(`/results?${data}`);
+let form = document.querySelectorAll('.email-form')
+formHandler(form);
 
 
-        }, false)
-    })
 
 
 

@@ -1,6 +1,5 @@
 @import "colors.scss";
 
-
 .results-wrapper {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -14,6 +13,10 @@
             background: $white;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
             border-radius: 30px;
+
+            &-subtitle {
+                font-weight: bold;
+            }
     
             &-info-wrappers{
                 margin-bottom: 1rem;
@@ -44,4 +47,27 @@
     padding-top: 30px;
     padding-bottom: 30px;
   
+}
+
+.spinner {
+    margin-top:300px;
+    margin-bottom: 300px;
+    img {
+        width: 154px;
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+
+.no-results {
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.search-again {
+    
 }
