@@ -11,7 +11,8 @@ module.exports = {
     filename: "[name].js"
   },
   devServer: {
-    publicPath: '/'
+    inline: true,
+    port: process.env.PORT || 5000
   }
 
 };
