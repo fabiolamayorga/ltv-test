@@ -19,7 +19,6 @@
     "css-prefix": "postcss --replace assets/css/starter.css --use autoprefixer --map",
     "css-purge": "purgecss --css assets/css/starter.css --content index.html --output assets/css/",
     "css": "npm run css-compile && npm run css-prefix",
-    "js": "babel src -d assets",
     "server": "serve --listen 3000",
     "watch": "nodemon -e html,scss -x \"npm run css\"",
     "test": "npm run css",
@@ -39,7 +38,8 @@
     "bootstrap": "^4.5.3",
     "bootstrap-icons": "^1.0.0",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "webpack": "^5.11.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
