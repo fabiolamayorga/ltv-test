@@ -2,6 +2,9 @@
   "name": "bootstrap-npm-starter",
   "version": "1.2.0",
   "description": "Demo project for building a Bootstrap powered site via npm.",
+  "engines": {
+    "node": "10.16.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/twbs/bootstrap-npm-starter.git"
