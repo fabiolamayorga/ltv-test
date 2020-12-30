@@ -8,5 +8,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "assets/js"),
     filename: "[name].js"
+  },
+  devServer: {
+    publicPath: '/'
   }
+
 };

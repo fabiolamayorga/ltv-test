@@ -6,7 +6,7 @@
     "node": "10.16.0"
   },
   "scripts": {
-    "dev": "webpack serve --config webpack.config.js",
+    "dev": "webpack serve ",
     "start": "npm run dev",
     "build": "npm run css && npm run webpack",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
