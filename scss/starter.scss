@@ -1,92 +1,4 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
-
-
-//
-// Override Bootstrap here
-//
-// Main site colors:
-// $blue: #004A80;
-// $white: #fff;
-// $yellow: #F6BC25;
-// $darkGray: #4A4A4A;
-// $lightGray: #9B9B9B;
-
-//Colors override
-@import "colors.scss";
-
-// Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
-
-// Customize some defaults
-$body-color: $blue;
-$body-bg: #f5f5f5;
-$border-radius: .4rem;
-
-
-
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
-
-// @import "bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Import just the styles you need. Note that some stylesheets are required no matter what.
-
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
-// @import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
-@import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar"; // Requires nav
-@import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
-// @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-// @import "bootstrap/scss/print";
-
-
+@import "global.scss";
 
 
 //
@@ -94,11 +6,9 @@ $border-radius: .4rem;
 //
 
 body {
-  //padding: 3rem;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
 }
-
 
 h2 {
   font-size: 38px;
@@ -112,32 +22,31 @@ ul {
 }
 
 .color-yellow {
-  color: $yellow
+  color: $yellow;
 }
 
 .color-white {
-  color: $white
+  color: $white;
 }
 
-.color-blue{
-  color: $blue
+.color-blue {
+  color: $blue;
 }
 
-.bg-company-color{
+.bg-company-color {
   background: $blue;
-
 }
 
 .main-content {
-  background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
-  padding-top: 30px;
+  background-image: linear-gradient(0deg, #e6e6e6 0%, #ffffff 100%);
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 p {
   color: $darkGray;
   font-size: 18px;
 }
-
 
 .head-text {
   color: $white;
@@ -146,11 +55,16 @@ p {
 
 .header-icons {
   padding-top: 20px;
-  padding-bottom: 30px; 
+  padding-bottom: 20px;
 
   .icon {
     margin-left: 25px;
   }
+}
+
+.form-wrapper {
+  padding-top: 30px;
+  padding-bottom: 65px;
 }
 
 .email-form {
@@ -159,66 +73,66 @@ p {
     color: $lightGray;
     font-size: 16px;
     text-transform: uppercase;
-    background: #FFFFFF;
-    box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+    background: #ffffff;
+    box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     font-weight: bold;
     //margin-bottom: 10px;
     margin: 0;
-
   }
 
   .btn-primary {
-    background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
-    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    background-image: linear-gradient(225deg, #f2da56 0%, #f6bc25 100%);
+    box-shadow: 0 3px 0 0 #a6953b, inset 0 1px 0 0 #ffffff;
     border-radius: 6px;
     font-size: 22px;
     color: $blue;
     letter-spacing: 0.93px;
     text-align: center;
     text-transform: uppercase;
-    width: 100%; 
+    width: 100%;
     font-weight: bold;
+    margin-top: 10px;
 
     &:hover {
       background: $darkYellow;
-      box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
-
+      box-shadow: 0 3px 0 0 #a6953b, inset 0 1px 0 0 #ffffff;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       height: 50px;
+      margin: 0;
     }
   }
 
   .email-form-elements {
     flex-direction: row;
 
-    @include media-breakpoint-up(lg) {
-        flex-direction: column;    
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
     }
   }
 
   .form-disclaimer {
     margin-top: 30px;
-    padding-bottom: 40px;
+    //padding-bottom: 40px;
+    p {
+      margin: 0;
+    }
+
     .icon-lock {
       margin-right: 10px;
-      
     }
 
-    @include media-breakpoint-up(lg) {
-      padding-bottom: 95px;
+    @include media-breakpoint-up(md) {
+      //padding-bottom: 95px;
     }
-
-
   }
-
-
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
-  box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.2);
   border-color: $danger;
   border-width: 3px;
   border-radius: 3px;
@@ -226,10 +140,22 @@ p {
 }
 
 .invalid-feedback {
-  color: $white;
-  background: $danger;
   margin: 0;
-  padding-left: 3px;
+
+  span {
+    color: $white;
+    background: $danger;
+    padding-left: 3px;
+    padding: 5px 10px;
+    border-radius: 0 0 3px 3px; 
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+
+    }
+  }
+
 }
 
 .custom-card {
@@ -242,11 +168,18 @@ p {
     width: 50px;
     height: 50px;
     font-family: HelveticaNeue-Bold;
-    font-size: 26.88px;
+    font-size: 26px;
     color: $yellow;
     letter-spacing: 0;
     text-align: center;
     line-height: 50px;
+
+    @include media-breakpoint-up(md) {
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      font-size: 48px;
+    }
   }
 
   .card-body {
@@ -254,7 +187,6 @@ p {
 
     .card-text {
       color: $black;
-
     }
   }
 
@@ -262,14 +194,13 @@ p {
     color: $blue;
     font-size: 20px;
     text-transform: uppercase;
+    font-weight: bold;
   }
 }
 
-
 .hide {
-  display: none!important; 
+  display: none!important;
 }
-
 
 /* Footer Navigation */
 
@@ -278,7 +209,6 @@ p {
   p {
     font-size: 15px;
     color: $gray;
-
   }
 
   .footer-navigation {
@@ -286,7 +216,7 @@ p {
       margin-right: 5px;
       margin-right: 5px;
       flex-basis: auto;
-      margin: .25em 0;
+      margin: 0.25em 0;
       padding: 0 1em;
       text-align: center;
       border-left: 1px solid $blue;
@@ -302,9 +232,8 @@ p {
 
     justify-content: center;
 
-
-    @include media-breakpoint-up(lg) {
-      justify-content: flex-start;
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
     }
   }
 }

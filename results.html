@@ -27,15 +27,15 @@
         </div>
     </header>
     <div class="container results-wrapper ">
-        <div class="spinner row d-flex align-items-center flex-column">
+        <div class="spinner row align-items-center flex-column">
             <img src="assets/imgs/loading_spinner.gif" />
             <p class="color-blue mt-3">Please wait a moment</p>
         </div>
-        <div class="row no-results align-items-center flex-column hide">
+        <div class="row no-results align-items-center flex-column d-none">
             <h2>0 results</h2>
             <p>Try starting a new search below</p>
         </div>
-        <div class="row result hide d-flex justify-content-center">
+        <div class="row result d-none justify-content-center">
             <div class="col-12">
                 <div class="result-headline">
                     <h2>1 Result</h2>
@@ -49,54 +49,77 @@
 
 
     </div>
-    <div class="container-fluid bg-company-color search-again-wrapper">
-        <div class="row">
-            <div class="col">
-                <h2 class="text-center color-white">
-                    Can’t Find The Right Person?
-                </h2>
-                <p class="head-text text-center">
-                    <span class="color-yellow">Try Again</span> - Make a new search
-                </p>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-sm-9 col-md-9">
-                        <form class="email-form novalidate method="GET" action="results">
-                            <div class="mb-3 d-flex justify-content-between row">
-                                <div class="col-sm-12 col-lg-10">
-                                    <div class="email-form-elements">
-                                        <input type="email" placeholder="Email" class="form-control" required id="emai"
-                                            name="email" />
+    <div class="container-fluid bg-company-color search-again-wrapper d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center color-white">
+                        Can’t Find The Right Person?
+                    </h2>
+                    <p class="head-text text-center">
+                        <span class="color-yellow">Try Again</span> - Make a new search
+                    </p>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12">
+                            <form class="email-form novalidate method=" GET" action="results">
+                                <div class="mb-3 d-flex justify-content-between row">
+                                    <div class="col-sm-12 col-lg-10">
+                                        <div class="email-form-elements">
+                                            <input type="email" placeholder="Email" class="form-control" required
+                                                id="emai" name="email" />
 
-                                        <div class="row invalid-feedback">
-                                            <div class="col-lg-6 col-sm-12  ">
-                                                Please add a valid email address
-
-                                            </div>
+                                                <div class="invalid-feedback">
+                                                    <span>
+                                                      Please add a valid email address
+                                
+                                                    </span>
+                                                  </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-lg-2">
-                                    <button type="submit" class="btn btn-primary">Go!</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-disclaimer d-flex align-items-start">
-                                        <img src="assets/imgs/SVGs/lock.svg" class="icon-lock" />
-                                        <p class="color-yellow">Enter Any Email Address. They won't be
-                                            notified.</p>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <button type="submit" class="btn btn-primary">Go!</button>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-disclaimer d-flex align-items-start">
+                                            <img src="assets/imgs/SVGs/lock.svg" class="icon-lock" />
+                                            <p class="color-yellow">Enter Any Email Address. They won't be
+                                                notified.</p>
+                                        </div>
+                                    </div>
 
-                            </div>
+                                </div>
+                        </div>
+
+                        </form>
                     </div>
+                </div>
 
-                    </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-md-9 col-sm-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex
+                        ea commodo consequat.</p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="d-flex footer-navigation">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+
+                    </ul>
                 </div>
             </div>
-
         </div>
-        <script src="assets/js/results.js"></script>
+    </footer>
+    <script src="assets/js/results.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
 		"../../scss/colors.scss"
 	],
 	"sourcesContent": [
-		"$blue: #004A80;\n$white: #fff;\n$yellow: #F6BC25;\n$darkYellow: #A6953B;\n$gray: #999;\n$darkGray: #4A4A4A;\n$lightGray: #9B9B9B;\n$danger: #F0002F;"
+		"$blue: #004A80;\n$white: #fff;\n$cream: #F8F8F8;\n$yellow: #F6BC25;\n$darkYellow: #A6953B;\n$gray: #999;\n$darkGray: #4A4A4A;\n$lightGray: #9B9B9B;\n$danger: #F0002F;"
 	],
 	"names": [],
 	"mappings": ""

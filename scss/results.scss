@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "global.scss";
 
 .results-wrapper {
     margin-top: 30px;
@@ -44,14 +44,13 @@
 
 
 .search-again-wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  
+    padding-top: 105px;
+    padding-bottom: 105px;
 }
 
 .spinner {
-    margin-top:300px;
-    margin-bottom: 300px;
+    margin-top:60px;
+    margin-bottom: 85px;
     img {
         width: 154px;
     }
@@ -60,14 +59,16 @@
         font-size: 24px;
         font-weight: bold;
     }
+
+    @include media-breakpoint-up(md) {
+        margin-top:300px;
+        margin-bottom: 300px;
+    }
 }
 
 
 .no-results {
+    background: $cream;
     margin-top: 160px;
     margin-bottom: 160px;
-}
-
-.search-again {
-    
 }

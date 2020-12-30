@@ -14,6 +14,7 @@ const email = searchParams.get('email');
 let spinnerElement = document.querySelector('.spinner');
 let noResultsElement = document.querySelector('.no-results');
 let resultsElement = document.querySelector('.result');
+let searchAgainWrapper = document.querySelector('.search-again-wrapper');
 
 let cardElement = document.querySelector('.result .card');
 let form = document.querySelectorAll('.email-form')
@@ -26,12 +27,13 @@ const getData = (email) => {
     fetch(`https://ltv-data-api.herokuapp.com/api/v1/records.json?email=${email}`)
     .then(response => response.json())
     .then(data => {
-        spinnerElement.classList.add('hide');
+        spinnerElement.classList.add('d-none');
         if (data.length === 0) {
-            noResultsElement.classList.remove('hide');
+            noResultsElement.classList.remove('d-none');
         } else {
-            resultsElement.classList.remove('hide');
-
+            resultsElement.classList.remove('d-none');
+            searchAgainWrapper.classList.remove('d-none');
+            // Create component that renders card results
             let cardComponent =
                 ` <div class="card-body">
                 <div class="row mb-4">
