@@ -3,7 +3,8 @@
   "version": "1.2.0",
   "description": "Demo project for building a Bootstrap powered site via npm.",
   "engines": {
-    "node": "10.16.0"
+    "node": "10.16.0",
+    "npm":  "6.9.0"
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.js ",
