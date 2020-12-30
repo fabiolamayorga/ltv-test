@@ -6,7 +6,7 @@
     "node": "10.16.0"
   },
   "scripts": {
-    "start": "npm run server",
+    "start": "serve -s build",
     "build": "npm run css && npm run webpack",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
     "css-prefix": "postcss --replace assets/css/starter.css --use autoprefixer --map",
@@ -14,7 +14,8 @@
     "css": "npm run css-compile && npm run css-prefix",
     "server": "serve --listen 3000",
     "watch": "nodemon -e html,scss -x \"npm run css\"",
-    "webpack": "webpack --config webpack.config.js "
+    "webpack": "webpack --config webpack.config.js ",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [
     "bootstrap",
