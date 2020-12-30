@@ -16,9 +16,9 @@ $ npm run build
 
 - Run the server
 ```sh
-$ npm run server
+$ npm start
 ```
-Application should be openning on: <http://localhost:3000/>
+Application should be openning on: <http://localhost:8080/>
 
 
 
